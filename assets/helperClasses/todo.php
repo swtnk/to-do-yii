@@ -47,6 +47,5 @@
 
     $todo1 = new TodoCreator('Header1', 'This is a new todo.', 'Started at 1', 'Ended at 2', 'pending', 'test123');
     $data = $todo1 -> getTodo();
-    // var_dump($data);
     $data2 = $todo1 -> getFromDB();
 ?>
