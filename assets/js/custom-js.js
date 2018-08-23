@@ -24,6 +24,7 @@ document.onreadystatechange = () => {
                 }
             } else if (e.keyCode == 27) {
                 document.getElementById("todoForm").reset();
+                document.querySelector("#todoHeader").blur();
                 document.querySelector("#todoHeader").classList.remove('btn-danger');
                 document.querySelector("#todoAddDivBtn").classList.remove('d-none');
                 document.querySelector("#todoDetails").classList.add('d-none');
