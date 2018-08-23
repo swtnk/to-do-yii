@@ -20,50 +20,10 @@
         <div class="row">
             <div class="offset-4 col-4 card bg-faded card-block content-container">
                 <div class='header'>To-Do-List</div>
-
                 <!-- to-do form -->
-                <div class="form">
-                    <form id="todoForm">
-                        <div class="input-group mb-3">
-                            <input type="text" id="todoHeader" class="form-control" placeholder="Create Title" aria-label="Title" aria-describedby="basic-addon1">
-                            <div class="input-group-append" id="todoAddDivBtn">
-                                <button class="btn btn-outline-secondary" id="addToDo" type="button"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <div class="input-group-append d-none" id="todoCloseDivBtn">
-                                <button class="btn btn-outline-secondary" id="closeToDo" type="button"><i class="fas fa-times"></i></button>
-                            </div>
-                        </div>
-                        <div class="detailedToDo card d-none" id="todoDetails" style="margin-top: -15px; padding: 5px;">
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <small><label for="startTime">Start Time:</label></small>
-                                    <input type="date" class="form-control" id="startTime" placeholder="Email">
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <small><label for="endTime">End Time:</label></small>
-                                    <input type="date" class="form-control" id="endTime" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-row"> 
-                                <div class="form-group col-sm-12">
-                                    <small><label for="desc">Description:</label></small>
-                                    <textarea class="form-control" id="desc"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-sm-12">
-                                    <button class="btn btn-primary col-sm-12" id="saveToDo">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="errorAlert" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
-                        <strong>Set a title for To-Do proceed.</strong>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                </div>
+                <?php
+                    include 'assets/components/todoApp.php';
+                ?>
                 <!-- end to-do form -->
                 <p style="text-align: center; margin-top: 15px;">*Under development</p>
             </div>

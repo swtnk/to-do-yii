@@ -1,7 +1,15 @@
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
+        // document.querySelector("body").onkeydown = (e) => {
+        //     e.preventDefault();
+        //     if(e.keyCode == 17 && e.keyCode == 18) {
+        //         console.log("ctrl + N");
+        //     } else {
+        //         console.log(e.keyCode);
+        //     }
+        // }
         // show close button, show todo details fields and hide add button
-        document.querySelector("#todoHeader").onkeydown = (e) => {
+        document.querySelector("#toDoFormArea").onkeydown = (e) => {
             if (e.keyCode == 13){
                 e.preventDefault();
                 if(document.querySelector("#todoHeader").value === ''){
@@ -16,6 +24,7 @@ document.onreadystatechange = () => {
                 }
             } else if (e.keyCode == 27) {
                 document.getElementById("todoForm").reset();
+                document.querySelector("#todoHeader").classList.remove('btn-danger');
                 document.querySelector("#todoAddDivBtn").classList.remove('d-none');
                 document.querySelector("#todoDetails").classList.add('d-none');
                 document.querySelector('#todoCloseDivBtn').classList.add('d-none');
