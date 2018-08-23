@@ -1,13 +1,13 @@
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
-        // document.querySelector("body").onkeydown = (e) => {
-        //     e.preventDefault();
-        //     if(e.keyCode == 17 && e.keyCode == 18) {
-        //         console.log("ctrl + N");
-        //     } else {
-        //         console.log(e.keyCode);
-        //     }
-        // }
+        // shortcut to create todo
+        document.onkeydown = (e) => {
+            if(e.altKey && e.which == 78) {
+                document.querySelector("#todoHeader").focus();
+            } else {
+                return true;
+            }
+        }
         // show close button, show todo details fields and hide add button
         document.querySelector("#toDoFormArea").onkeydown = (e) => {
             if (e.keyCode == 13){
