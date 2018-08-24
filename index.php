@@ -35,16 +35,36 @@
             <div style="margin-top: 20px;"></div>
             <div class="test-data row footer" style="position: absolute; bottom: 0; width: 100%; height: 180px;">
                 <div class="col-12 card" style="background: #000; color: #fff; overflow-Y: scroll;">
-                    <?php
-                        // echo '<p class="center tester">Test-Data</p>';
-                        // require_once('assets/helperClasses/todo.php');
-                        // echo '<p class="center">USER IP</p>';
-                        // require_once('assets/helperClasses/getUserIP.php');
-                        // $ip = new GetUserIp();
-                        // echo $ip -> getIP();
-                        echo '<p class="center tester">Recent Visitors</p>';
-                        echo '<div class="visiting-ip"></div>';
-                    ?>
+                    <div class="tester">Visitors</div>
+                        <div class="row" style="padding: 15px 0 15px 0;">
+                            <div class="col-sm-4 ipaddr">IP Address</div>
+                            <div class="col-sm-4 visittime">Visit time</div>
+                        </div>
+                            <?php
+                                require_once('assets/helperFunctions/fetchRecentUser.php');
+                                $data = fetch_visitors();
+                            ?>
+
+                            <?php while($row = $data -> fetch(PDO::FETCH_ASSOC)): ?>
+
+                                <div class="row" style="padding: 15px 0 15px 0;">
+                                    <div class="col-sm-4 ipaddr"><?php echo $row['ip'] ?></div>
+                                    <div class="col-sm-4 visittime"><?php echo date('d F, Y h:m:s:n', time($row['time'])) ?></div>
+                                </div>
+
+                            <?php endwhile; ?>
+                    
+                            <!-- <?php
+                                while($row = $data -> fetch(PDO::FETCH_ASSOC)) {
+                                    echo "<div class='row'>";
+                                    echo "<div class='col-4 ipaddr'> " . $row['ip'] . "</div>";
+                                    echo "<div class='col-4 visittime'>" . $row['time'] . "</div>";
+                                    echo "</div>";
+                                }
+
+                            ?> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
