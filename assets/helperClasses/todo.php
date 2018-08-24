@@ -33,10 +33,10 @@
         function getFromDB(){
 
             require_once('connectdb.php');
-            $connection = new DBConnect('todo_db', 'todo_user', 'connect@123');
-            $connect = $connection -> getConnection();
+            $to_do_connection = new DBConnect('todo_db', 'todo_user', 'connect@123');
+            $to_do_connect = $to_do_connection -> getConnection();
 
-            foreach($connect -> query('SELECT * FROM `todo_data`') as $row) {
+            foreach($to_do_connect -> query('SELECT * FROM `todo_data`') as $row) {
 
                 print_r($row);
 

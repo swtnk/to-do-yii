@@ -15,6 +15,10 @@
         </style>
     </head>
     <body>
+        <?php
+            require_once('assets/helperFunctions/storeVisitorIP.php');
+            storeVisitorIP();
+        ?>
         <div class="container-fluid">
             <div class="row" style="height: 12px;"></div>
             <div class="row">
@@ -31,15 +35,15 @@
             <div style="margin-top: 20px;"></div>
             <div class="test-data row footer" style="position: absolute; bottom: 0; width: 100%; height: 180px;">
                 <div class="col-12 card" style="background: #000; color: #fff; overflow-Y: scroll;">
-                    <p class="center tester">Test-Data</p>
                     <?php
-                        require_once('assets/helperClasses/todo.php');
-                    ?>
-                    <p class="center">USER IP</p>
-                    <?php
-                        require_once('assets/helperClasses/getUserIP.php');
-                        $ip = new GetUserIp();
-                        echo $ip -> getIP();
+                        // echo '<p class="center tester">Test-Data</p>';
+                        // require_once('assets/helperClasses/todo.php');
+                        // echo '<p class="center">USER IP</p>';
+                        // require_once('assets/helperClasses/getUserIP.php');
+                        // $ip = new GetUserIp();
+                        // echo $ip -> getIP();
+                        echo '<p class="center tester">Recent Visitors</p>';
+                        echo '<div class="visiting-ip"></div>';
                     ?>
                 </div>
             </div>
@@ -48,5 +52,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="assets/js/custom-js.js" type="text/javascript"></script>
+        <script src="assets/js/ajax-calls.js" type="text/javascript"></script>
     </body>
 </html>
