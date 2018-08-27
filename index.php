@@ -53,16 +53,6 @@
                                 </div>
 
                             <?php endwhile; ?>
-                    
-                            <!-- <?php
-                                while($row = $data -> fetch(PDO::FETCH_ASSOC)) {
-                                    echo "<div class='row'>";
-                                    echo "<div class='col-4 ipaddr'> " . $row['ip'] . "</div>";
-                                    echo "<div class='col-4 visittime'>" . $row['time'] . "</div>";
-                                    echo "</div>";
-                                }
-
-                            ?> -->
                         </div>
                     </div>
                 </div>
