@@ -49,7 +49,7 @@
 
                                 <div class="row" style="padding: 15px 0 15px 0;">
                                     <div class="col-sm-4 ipaddr"><?php echo $row['ip'] ?></div>
-                                    <div class="col-sm-4 visittime"><?php echo date('d F, Y | h:m:s', time($row['time'])) ?></div>
+                                    <div class="col-sm-4 visittime"><?php echo date('d F, Y | h:m:s', $row['time']) ?></div>
                                 </div>
 
                             <?php endwhile; ?>
