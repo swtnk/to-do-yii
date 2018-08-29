@@ -53,5 +53,6 @@ document.onreadystatechange = () => {
             document.querySelector("#todoDetails").classList.add('d-none');
             document.querySelector('#todoCloseDivBtn').classList.add('d-none');
         });
+        
     }
 }

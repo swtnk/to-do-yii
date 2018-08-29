@@ -1,7 +1,7 @@
 <div class="form" id="toDoFormArea">
-    <form id="todoForm">
+    <form id="todoForm" name="todoForm">
         <div class="input-group mb-3">
-            <input type="text" id="todoHeader" class="form-control" placeholder="Create Title" aria-label="Title" aria-describedby="basic-addon1">
+            <input type="text" id="todoHeader" name="todoHeader" class="form-control" placeholder="Create Title" aria-label="Title" aria-describedby="basic-addon1">
             <div class="input-group-append" id="todoAddDivBtn">
                 <button class="btn btn-outline-secondary" id="addToDo" type="button"><i class="fas fa-plus"></i></button>
             </div>
@@ -13,22 +13,22 @@
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <small><label for="startTime">Start Time:</label></small>
-                    <input type="date" class="form-control" id="startTime" placeholder="Email">
+                    <input type="date" name="startDate" class="form-control" id="startTime">
                 </div>
                 <div class="form-group col-sm-6">
                     <small><label for="endTime">End Time:</label></small>
-                    <input type="date" class="form-control" id="endTime" placeholder="Email">
+                    <input type="date" name="endDate" class="form-control" id="endTime">
                 </div>
             </div>
             <div class="form-row"> 
                 <div class="form-group col-sm-12">
                     <small><label for="desc">Description:</label></small>
-                    <textarea class="form-control" id="desc"></textarea>
+                    <textarea name="description" class="form-control" id="desc"></textarea>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-sm-12">
-                    <button class="btn btn-primary col-sm-12" id="saveToDo">Save</button>
+                    <button name="createTodo" class="btn btn-primary col-sm-12" id="saveToDo">Save</button>
                 </div>
             </div>
         </div>
